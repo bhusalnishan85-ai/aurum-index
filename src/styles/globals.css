@@ -1,0 +1,154 @@
+@import url('./tokens.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  background: transparent;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 38%, transparent);
+  color: var(--ink);
+}
+
+::-webkit-scrollbar {
+  width: var(--s-2);
+  height: var(--s-2);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--r-pill);
+}
+
+.skip-link {
+  position: fixed;
+  left: var(--s-4);
+  top: var(--s-4);
+  z-index: 100;
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  transform: translateY(calc(-100% - var(--s-4)));
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.container-shell {
+  width: min(100% - var(--s-8), 92rem);
+  margin-inline: auto;
+}
+
+.section-space {
+  padding-block: var(--s-20);
+}
+
+.kicker {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.display-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-6xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--fw-regular);
+}
+
+.editorial-grid {
+  display: grid;
+  gap: var(--s-6);
+}
+
+.surface-band {
+  background: var(--surface);
+}
+
+.surface-band-2 {
+  background: var(--surface-2);
+}
+
+.hairline {
+  height: 1px;
+  background: var(--border);
+}
+
+.museum-card {
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface) 82%, transparent);
+  box-shadow: var(--shadow-sm);
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.1;
+  mix-blend-mode: soft-light;
+  background-image:
+    radial-gradient(circle at 25% 25%, var(--ink) 0, transparent 28%),
+    radial-gradient(circle at 75% 35%, var(--accent) 0, transparent 22%),
+    radial-gradient(circle at 50% 80%, var(--ink-muted) 0, transparent 24%);
+}
+
+.cursor-none {
+  cursor: none;
+}
+
+@media (max-width: 767px) {
+  .container-shell {
+    width: min(100% - var(--s-6), 92rem);
+  }
+
+  .section-space {
+    padding-block: var(--s-16);
+  }
+}
