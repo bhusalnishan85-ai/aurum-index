@@ -1,0 +1,115 @@
+:root {
+  --brand-50: #f3efe7;
+  --brand-100: #ede7dc;
+  --brand-200: #ded8cd;
+  --brand-300: #c8bfaf;
+  --brand-400: #b9b0a2;
+  --brand-500: #81786b;
+  --brand-600: #5f584e;
+  --brand-700: #3a352e;
+  --brand-800: #1e1c19;
+  --brand-900: #050505;
+  --brand: var(--brand-900);
+
+  --bg: var(--brand-900);
+  --surface: var(--brand-800);
+  --surface-2: var(--brand-700);
+  --surface-3: var(--brand-600);
+  --border: color-mix(in oklab, var(--brand-400) 35%, transparent);
+  --border-strong: color-mix(in oklab, var(--brand-400) 70%, transparent);
+  --border-focus: #b46a3c;
+  --ink: var(--brand-50);
+  --ink-2: var(--brand-200);
+  --ink-muted: var(--brand-400);
+  --ink-inverse: var(--brand-900);
+  --success: #87906b;
+  --success-ink: var(--brand-50);
+  --warning: #b18b56;
+  --warning-ink: var(--brand-900);
+  --danger: #8d5c52;
+  --danger-ink: var(--brand-50);
+  --info: #7d8f96;
+  --info-ink: var(--brand-900);
+  --accent: #b46a3c;
+
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r: 12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-2xl: 36px;
+  --r-pill: 999px;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-28: 112px;
+  --s-32: 128px;
+
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Manrope", system-ui;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 2rem;
+  --fs-4xl: 3rem;
+  --fs-5xl: 4.5rem;
+  --fs-6xl: clamp(4.5rem, 12vw, 10rem);
+
+  --lh-tight: 0.92;
+  --lh-snug: 1.1;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.75;
+
+  --tracking-tight: -0.04em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.14em;
+  --tracking-wider: 0.22em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --shadow-xs: 0 1px 0 color-mix(in oklab, var(--brand-900) 20%, transparent);
+  --shadow-sm: 0 8px 30px color-mix(in oklab, var(--brand-900) 18%, transparent);
+  --shadow: 0 18px 48px color-mix(in oklab, var(--brand-900) 22%, transparent);
+  --shadow-lg: 0 28px 80px color-mix(in oklab, var(--brand-900) 28%, transparent);
+  --shadow-xl: 0 48px 120px color-mix(in oklab, var(--brand-900) 34%, transparent);
+  --shadow-brand: 0 24px 64px color-mix(in oklab, var(--accent) 18%, transparent);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur: 220ms;
+  --dur-slow: 380ms;
+  --ring: 0 0 0 3px color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+[data-theme="light"] {
+  --brand: var(--brand-50);
+  --bg: var(--brand-50);
+  --surface: #ede7dc;
+  --surface-2: #e6dfd2;
+  --surface-3: #d8d0c3;
+  --border: color-mix(in oklab, var(--brand-700) 18%, transparent);
+  --border-strong: color-mix(in oklab, var(--brand-700) 36%, transparent);
+  --ink: var(--brand-900);
+  --ink-2: var(--brand-800);
+  --ink-muted: var(--brand-500);
+  --ink-inverse: var(--brand-50);
+}
