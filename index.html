@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AURUM Index — Interactive Digital Museum</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Instrument Serif"', 'serif'],
+              sans: ['"Manrope"', 'system-ui'],
+              mono: ['"JetBrains Mono"', 'monospace']
+            },
+            colors: {
+              brand: {
+                50: '#f3efe7',
+                100: '#ede7dc',
+                200: '#ded8cd',
+                300: '#c8bfaf',
+                400: '#b9b0a2',
+                500: '#81786b',
+                600: '#5f584e',
+                700: '#3a352e',
+                800: '#1e1c19',
+                900: '#050505'
+              }
+            },
+            boxShadow: {
+              ring: 'var(--ring)'
+            }
+          }
+        }
+      };
+    </script>
+
+    <link rel="stylesheet" href="src/styles/tokens.css" />
+    <link rel="stylesheet" href="src/styles/globals.css" />
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react":               "https://esm.sh/react@19.2.0",
+        "react/jsx-runtime":   "https://esm.sh/react@19.2.0/jsx-runtime",
+        "react-dom":           "https://esm.sh/react-dom@19.2.0?deps=react@19.2.0",
+        "react-dom/client":    "https://esm.sh/react-dom@19.2.0/client?deps=react@19.2.0",
+        "gsap":                "https://esm.sh/gsap@3.12.5",
+        "gsap/ScrollTrigger":  "https://esm.sh/gsap@3.12.5/ScrollTrigger",
+        "gsap/Flip":           "https://esm.sh/gsap@3.12.5/Flip",
+        "gsap/Observer":       "https://esm.sh/gsap@3.12.5/Observer",
+        "lenis":               "https://esm.sh/lenis@1.1.20",
+        "lenis/":              "https://esm.sh/lenis@1.1.20/",
+        "clsx":                "https://esm.sh/clsx@2.1.1",
+        "lucide-react":        "https://esm.sh/lucide-react@0.469.0?deps=react@19.2.0",
+        "lucide-react/":       "https://esm.sh/lucide-react@0.469.0/",
+        "zod":                 "https://esm.sh/zod@3.24.2",
+        "zod/":                "https://esm.sh/zod@3.24.2/"
+      }
+    }
+    </script>
+
+    <meta name="description" content="AURUM Index is a fictional contemporary art gallery presented as an interactive digital museum with editorial motion, orbiting collection scenes, and cinematic exhibition storytelling." />
+    <meta property="og:title" content="AURUM Index — Interactive Digital Museum" />
+    <meta property="og:description" content="A museum-grade digital gallery experience with cinematic motion, orbit collection, exhibitions, journal, and visit information." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600&auto=format&fit=crop&q=80" />
+    <link rel="canonical" href="https://aurum-index.example/#/" />
+
+    <script src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="root"></div>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/lib/utils.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/lib/gsap.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/lib/lenis.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/hooks/useReducedMotion.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/hooks/useTheme.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/hooks/useGSAP.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/data/artworks.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/data/exhibitions.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/data/articles.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/data/faqs.ts"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Button.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Card.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Input.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Badge.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Modal.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Tabs.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Accordion.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Skeleton.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/EmptyState.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/ErrorState.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/ui/Toast.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/motion/MagneticButton.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/motion/SplitText.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/motion/Marquee.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/motion/CursorFollower.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/sections/Hero.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/layout/Header.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/layout/Footer.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/components/layout/Layout.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/pages/Home.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/pages/Exhibitions.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/pages/Collection.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/pages/Journal.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/pages/Visit.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/pages/NotFound.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/App.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="src/main.tsx"></script>
+  
+<!-- Injected by MythMind AI -->
+<style data-mythmind-badge>
+  .__mm_badge{position:fixed;right:14px;bottom:14px;z-index:2147483647;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(10,13,20,0.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,58,41,0.35);box-shadow:0 8px 30px rgba(0,0,0,0.35),0 0 24px rgba(255,58,41,0.25);font:600 12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;color:#fff;text-decoration:none;letter-spacing:.02em;transition:transform .2s ease,box-shadow .2s ease}
+  .__mm_badge:hover{transform:translateY(-1px);box-shadow:0 12px 40px rgba(0,0,0,0.45),0 0 32px rgba(255,58,41,0.45)}
+  .__mm_badge .__mm_dot{width:16px;height:16px;border-radius:5px;background:linear-gradient(135deg,#FF3A29,#FF6A4D);display:grid;place-items:center;color:#fff;font-weight:900;font-size:10px;box-shadow:0 0 10px rgba(255,58,41,.6)}
+  .__mm_badge .__mm_txt{opacity:.95}
+  .__mm_badge .__mm_txt b{color:#FF6A4D;font-weight:800}
+  @media print{.__mm_badge{display:none}}
+</style>
+<a class="__mm_badge" data-mythmind-badge href="https://mythmind.co" target="_blank" rel="noopener noreferrer" aria-label="Made with MythMind AI">
+  <span class="__mm_dot">M</span><span class="__mm_txt">Made with <b>MythMind AI</b></span>
+</a>
+
+</body>
+</html>
